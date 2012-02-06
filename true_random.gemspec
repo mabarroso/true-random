@@ -6,7 +6,7 @@ require "true-random/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "true-random"
-  s.version     = Indicator::VERSION
+  s.version     = TrueRandom::VERSION
   s.authors     = ["Miguel Adolfo Barroso"]
   s.email       = ["mabarroso@mabarroso.com"]
   s.homepage    = "http://github.com/mabarroso/true-random"
