@@ -1,3 +1,3 @@
-module Indicator
-  VERSION = "0.0.1"
+module TrueRandom
+  VERSION = "0.1.2"
 end
