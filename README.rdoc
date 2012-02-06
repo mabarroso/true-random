@@ -1,0 +1,40 @@
+= true-random
+Get true random numbers from RANDOM.ORG.
+
+= Description
+Use the true random number service of RANDOM.ORG. The randomness comes from
+atmospheric noise, which for many purposes is better than the pseudo-random
+number algorithms typically used in computer programs.
+
+
+=Installation
+==From the command line.
+  gem install true-random
+
+==Using Gemfile.
+
+1 Add to your application Gemfile
+  gem 'true-random'
+
+2 Type
+  bundle install
+
+=Important note!
+To access RANDOM.ORG via an automated client, please make sure you observe the Guidelines for Automated Clients
+(http://www.random.org/clients/) or your computer may be banned.
+
+=Usage
+==Integer Generator
+  rnd = TrueRandom::Random.new
+  puts rnd.integer
+
+Parameters
+  n     The number of integers requested. 1 by default.
+  min   The smallest value allowed for each integer. 1 by default.
+  max   The largest value allowed for each integer. 100 by default.
+  base  The base that will be used to print the numbers, i.e., binary, octal, decimal or hexadecimal. Possible values are  2, 8, 10 or 16. 10 by default.
+
+The same example with full parameters
+  rnd = TrueRandom::Random.new
+  puts rnd.integer 1, 2, 100, 10
+
