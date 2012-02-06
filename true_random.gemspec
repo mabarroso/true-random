@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Indicator::VERSION
   s.authors     = ["Miguel Adolfo Barroso"]
   s.email       = ["mabarroso@mabarroso.com"]
-  s.homepage    = "http://github.com/mabarroso/indicator"
+  s.homepage    = "http://github.com/mabarroso/true-random"
   s.platform    = Gem::Platform::RUBY
   s.summary     = "Get true random numbers from RANDOM.ORG."
   s.description = "Use the true random number service of RANDOM.ORG. The randomness comes from atmospheric noise, which for many purposes is better than the pseudo-random number algorithms typically used in computer programs."
