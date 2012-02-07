@@ -39,10 +39,15 @@ The Integer Generator will generate truly random integers in configurable interv
 ```
 
 **Parameters**
+
 *_n_     The number of integers requested. 1 by default.
+
 *_min_   The smallest value allowed for each integer. 1 by default.
+
 *_max_   The largest value allowed for each integer. 100 by default.
+
 *_base_  The base that will be used to print the numbers, i.e., binary, octal, decimal or hexadecimal. Possible values are 2, 8, 10 or 16. 10 by default.
+
 
 The same example with full parameters
 
@@ -60,7 +65,9 @@ The Sequence Generator will randomize a given interval of integers, i.e., arrang
 ```
 
 **Parameters**
+
 *_min_   The lower bound of the interval (inclusive). 1 by default.
+
 *_max_   The upper bound of the interval (inclusive). 100 by default.
 
 The sequence requested must 10,000 numbers or shorter in length, i.e., max-min+1=1e4.
@@ -74,11 +81,17 @@ The String Generator will generate truly random strings of various length and ch
 ```
 
 **Parameters**
+
 *_n_           The number of strings requested. 1 by default.
+
 *_len_         The length of the strings. All the strings produced will have the same length. Max length 20. 20 by default.
+
 *_digits_      Determines whether digits (0-9) are allowed to occur in the strings. Possible values are true or false. True by default.
+
 *_upperalpha_  Determines whether uppercase alphabetic characters (A-Z) are allowed to occur in the strings. Possible values are true or false. True by default.
+
 *_loweralpha_  Determines lowercase alphabetic characters (a-z) are allowed to occur in the strings. Possible values are true or false. True by default.
+
 *_unique_      Determines whether the strings picked should be unique (as a series of raffle tickets drawn from a hat) or not (as a series of die rolls). If unique is set to on, then there is the additional constraint that the number of strings requested (num) must be less than or equal to the number of strings that exist with the selected length and characters. Possible values are true or false. True by default.
 
 ##Quota Checker
