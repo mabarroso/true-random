@@ -10,6 +10,10 @@ module TrueRandom
 			return integers "sequences/?min=#{min}&max=#{max}&col=1"
 		end
 
+		def string n = 1, len = 20, digits = true, upperalpha = true, loweralpha = true, unique = true
+			return strings "strings/?num=#{n}&len=#{len}&digits=#{on_off digits}&upperalpha=#{on_off upperalpha}&loweralpha=#{on_off loweralpha}&unique=#{on_off unique}"
+		end
+
     def quota ip = false
     	if ip
     		return integers "quota/?"
@@ -20,6 +24,10 @@ module TrueRandom
   	end
 
     private
+    def on_off value = false
+    	return value == true ? 'on' : 'off'
+  	end
+
     def integers uri
       response = request uri
 
