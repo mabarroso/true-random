@@ -6,6 +6,10 @@ module TrueRandom
       return integers "integers/?num=#{n}&min=#{min}&max=#{max}&col=1&base=#{base}"
     end
 
+		def sequence min=1, max=100
+			return integers "sequences/?min=#{min}&max=#{max}&col=1"
+		end
+
     def quota ip = false
     	if ip
     		return integers "quota/?"

@@ -25,6 +25,7 @@ To access RANDOM.ORG via an automated client, please make sure you observe the G
 
 =Usage
 ==Integer Generator
+The Integer Generator will generate truly random integers in configurable intervals.
   rnd = TrueRandom::Random.new
   puts rnd.integer
 
@@ -37,6 +38,15 @@ Parameters
 The same example with full parameters
   rnd = TrueRandom::Random.new
   puts rnd.integer 1, 2, 100, 10
+
+==Sequence Generator
+The Sequence Generator will randomize a given interval of integers, i.e., arrange them in random order.
+  rnd = TrueRandom::Random.new
+  puts rnd.sequence
+
+Parameters
+  min   The lower bound of the interval (inclusive). 1 by default.
+  max   The upper bound of the interval (inclusive). 100 by default.
 
 ==Quota Checker
 The Quota Checker allows you to examine your quota at any point in time. The
