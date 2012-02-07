@@ -21,4 +21,24 @@ describe TrueRandom::Random do
   	result.count.should == 10
   end
 
+  it "should be Array for sequence" do
+  	result = @rnd.sequence 10, 15
+  	result.count.should == 6
+  end
+
+  it "should be String" do
+  	result = @rnd.string
+  	result.class.should == String
+  end
+
+  it "should be Array for string" do
+  	result = @rnd.string 5
+  	result.count.should == 5
+  end
+
+  it "should be Fixnum for quota" do
+  	result = @rnd.quota
+  	result.class.should == Fixnum
+  end
+
 end
