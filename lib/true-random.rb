@@ -2,6 +2,10 @@ require 'net/http'
 
 module TrueRandom
   class Random
+	  def initialize
+  	  @proxy_url = false
+	  end
+
     def integer n=1, min=1, max=100, base = 10
       return integers "integers/?num=#{n}&min=#{min}&max=#{max}&col=1&base=#{base}"
     end
@@ -20,8 +24,12 @@ module TrueRandom
     	else
     		return integers "quota/?ip=#{ip}"
     	end
-
   	end
+
+  	def proxy url = false, port = 8080
+  	  @proxy_url = url
+  	  @proxy_port = port
+    end
 
     private
     def on_off value = false
@@ -45,7 +53,12 @@ module TrueRandom
     end
 
     def request uri
-      http_response = Net::HTTP.get_response(URI.parse('http://www.random.org/' + uri + '&format=plain&rnd=new'))
+      url = URI.parse('http://www.random.org/' + uri + '&format=plain&rnd=new')
+        http_response = Net::HTTP::Proxy(@proxy_url, @proxy_port).get_response(url)
+      if @proxy_url
+      else
+        http_response = Net::HTTP.get_response(url)
+      end
       return false unless http_response.code.to_i == 200
       results = []
       http_response.body.split("\n").each do |item|
