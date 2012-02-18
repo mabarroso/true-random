@@ -110,3 +110,6 @@ To enable proxy feature, set a proxy host.
 Set host to false to disable proxy.
 
 Default port is 8080.
+
+# License
+Released under the MIT license: [http://www.opensource.org/licenses/MIT](http://www.opensource.org/licenses/MIT)
