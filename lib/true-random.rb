@@ -53,7 +53,7 @@ module TrueRandom
     end
 
     def request uri
-      url = URI.parse('http://www.random.org/' + uri + '&format=plain&rnd=new')
+      url = URI.parse('https://www.random.org/' + uri + '&format=plain&rnd=new')
         http_response = Net::HTTP::Proxy(@proxy_url, @proxy_port).get_response(url)
       if @proxy_url
       else
