@@ -20,9 +20,9 @@ module TrueRandom
 
     def quota ip = false
     	if ip
-    		return integers "quota/?"
-    	else
     		return integers "quota/?ip=#{ip}"
+    	else
+    		return integers "quota/?"
     	end
   	end
 
